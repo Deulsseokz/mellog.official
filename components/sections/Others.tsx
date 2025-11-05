@@ -47,7 +47,7 @@ export function Others() {
     <div className="w-full h-full flex flex-col justify-between bg-white p-6">
       <div>
         <div className="mb-5">
-          <h2 className="text-xl font-bold text-gray-800 mb-1">
+          <h2 className="text-xl font-bold text-[#fc5f89] mb-1">
             ✦ 멜로그 히든 뱃지 ✦
           </h2>
           <p className="text-sm text-gray-500">

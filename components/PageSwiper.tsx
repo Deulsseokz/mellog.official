@@ -23,9 +23,8 @@ export function PageSwiper({
     <Swiper
       direction="vertical"
       className="w-full h-full"
-      modules={[Mousewheel, Pagination]}
+      modules={[Mousewheel]}
       mousewheel={true}
-      pagination={{ clickable: true }}
       onSwiper={onSwiper}
       onSlideChange={onSlideChange}
     >
