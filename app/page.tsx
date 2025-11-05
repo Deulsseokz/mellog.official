@@ -26,7 +26,7 @@ export default function Home() {
   };
 
   return (
-    <main className="w-full h-screen flex flex-col bg-white relative">
+    <main className="w-full h-svh flex flex-col bg-white relative">
       <AnimatePresence>
         {!isSplashFinished && (
           <motion.div
