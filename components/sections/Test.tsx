@@ -147,11 +147,6 @@ export function Test() {
                     </button>
                   </div>
                 </div>
-
-                {/* 마지막 질문이 아닐 때만 구분선 표시 */}
-                {index < quizData.length - 1 && (
-                  <hr className="border-[#FFE9EE] border-t-2 mt-9" />
-                )}
               </div>
             ))}
           </div>
