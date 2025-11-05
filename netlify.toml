@@ -1,0 +1,10 @@
+[build]
+  # 빌드 명령어 (package.json의 "build" 스크립트)
+  command = "npm run build"
+  
+  # Next.js의 빌드 결과물 폴더
+  publish = ".next"
+
+# Netlify에 Next.js 플러그인을 사용하도록 명시
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
