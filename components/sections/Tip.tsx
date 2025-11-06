@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { event as gtagEvent } from "@/lib/ga";
 
 // Swiper
 import { Pagination } from "swiper/modules";
@@ -47,6 +48,14 @@ export function Tip() {
     renderBullet: function (index: number, className: string) {
       return '<span class="' + className + '">' + (index + 1) + "</span>";
     },
+  };
+
+  const handleGaClick = () => {
+    gtagEvent("select_content", {
+      content_type: "button",
+      event_category: "가이드 탭",
+      event_label: "멜로그 설치 버튼 클릭",
+    });
   };
 
   return (
@@ -109,6 +118,7 @@ export function Tip() {
 
       <a
         href="https://apps.apple.com/kr/app/%EB%A9%9C%EB%A1%9C%EA%B7%B8/id6754064222"
+        onClick={handleGaClick}
         target="_blank"
         rel="noopener noreferrer"
         className="w-full py-2 xs:py-3 rounded-xl border-2 border-[#F76F8E] bg-white text-[#F76F8E] text-base xs:text-lg font-bold shadow-md hover:bg-gray-50 transition-colors duration-200 text-center"

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
+import { event as gtagEvent } from "@/lib/ga";
 
 const quizData = [
   {
@@ -51,10 +52,21 @@ const itemVariants: Variants = {
 export function Test() {
   const [answers, setAnswers] = useState<{ [key: number]: string | null }>({});
 
-  const handleAnswerClick = (question: number, answer: string) => {
-    // TODO: GA 이벤트 전송 로직
-    // 예: window.gtag('event', 'test_click', { question, answer });
-    setAnswers((prev) => ({ ...prev, [question]: answer }));
+  const handleAnswerClick = (
+    questionNumber: number,
+    q: string,
+    answer: string
+  ) => {
+    setAnswers((prevAnswers) => ({
+      ...prevAnswers,
+      [questionNumber]: answer,
+    }));
+
+    gtagEvent("select_content", {
+      content_type: "button",
+      event_category: "A/B Test",
+      event_label: `Q${questionNumber}. ${q} - ${answer}`,
+    });
   };
 
   // 버튼 스타일
@@ -126,7 +138,9 @@ export function Test() {
 
                   <div className="grid grid-cols-2 gap-3">
                     <button
-                      onClick={() => handleAnswerClick(item.q, item.options[0])}
+                      onClick={() =>
+                        handleAnswerClick(item.q, item.tagline, item.options[0])
+                      }
                       className={
                         answers[item.q] === item.options[0]
                           ? activeClass
@@ -136,7 +150,9 @@ export function Test() {
                       {item.options[0]}
                     </button>
                     <button
-                      onClick={() => handleAnswerClick(item.q, item.options[1])}
+                      onClick={() =>
+                        handleAnswerClick(item.q, item.tagline, item.options[1])
+                      }
                       className={
                         answers[item.q] === item.options[1]
                           ? activeClass

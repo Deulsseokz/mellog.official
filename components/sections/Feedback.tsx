@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
+import { event as gtagEvent } from "@/lib/ga";
 
 const buttonVariants: Variants = {
   hidden: { opacity: 0, y: 50 },
@@ -14,6 +15,14 @@ const buttonVariants: Variants = {
 
 export function Feedback() {
   const feedbackLink = "https://forms.gle/gSjx1Gy42D3nRHE39";
+
+  const handleGaClick = () => {
+    gtagEvent("select_content", {
+      content_type: "button",
+      event_category: "이벤트 탭",
+      event_label: "후기 작성 버튼 클릭",
+    });
+  };
 
   return (
     <motion.div
@@ -32,6 +41,7 @@ export function Feedback() {
 
       <a
         href={feedbackLink}
+        onClick={handleGaClick}
         target="_blank"
         rel="noopener noreferrer"
         className="absolute bottom-[2%] left-1/2 -translate-x-1/2 w-[85%] max-w-[500px]"
