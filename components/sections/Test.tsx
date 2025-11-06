@@ -59,7 +59,7 @@ export function Test() {
 
   // 버튼 스타일
   const baseButtonClass =
-    "w-full py-3 rounded-xl border-2 font-bold transition-all duration-200 text-sm";
+    "w-full py-2 xs:py-3 rounded-xl border-2 font-bold transition-all duration-200 text-xs xs:text-sm";
   const activeClass = `${baseButtonClass} border-[#F76F8E] text-[#F76F8E] bg-[#FFF5F7]`;
   const inactiveClass = `${baseButtonClass} border-gray-300 text-gray-500 bg-white`;
 
@@ -78,7 +78,7 @@ export function Test() {
           className="flex flex-col items-center"
         >
           {/* 1-1. 상단 타이틀 */}
-          <div className="flex justify-center">
+          <div className="flex justify-center w-[250px] xs:w-[360px]">
             <Image
               src="/test/title.svg"
               alt="멜로그 테스트"
@@ -88,7 +88,7 @@ export function Test() {
           </div>
 
           {/* 1-2. A/B 테스트 안내 문구 */}
-          <div className="text-center text-xs text-white opacity-80 mt-3">
+          <div className="text-center text-[11px] xs:text-xs text-white opacity-80 mt-3">
             <p>
               클릭하신 답변은 더 좋은 멜로그를 만들기 위한 A/B 테스트 자료로
               쓰여요.
@@ -111,15 +111,15 @@ export function Test() {
           </div>
 
           {/* 3. 메인 테스트 카드 */}
-          <div className="w-full min-h-[70vh] bg-white rounded-t-[20px] border-[5px] border-[#FFE9EE] py-10 px-5 flex flex-col gap-9">
+          <div className="w-full xs:min-h-[70vh] bg-white rounded-t-[20px] border-[5px] border-[#FFE9EE] py-7 xs:py-10 px-5 flex flex-col gap-9">
             {quizData.map((item, index) => (
               <div key={item.q}>
-                <div className="flex flex-col gap-5">
+                <div className="flex flex-col gap-3 xs:gap-5">
                   <div className="flex flex-col gap-0.5">
-                    <span className="text-sm font-bold text-[#F76F8E]">
+                    <span className="text-xs xs:text-sm font-bold text-[#F76F8E]">
                       {item.tagline}
                     </span>
-                    <h3 className="text-xl font-bold text-gray-800">
+                    <h3 className="text-base xs:text-xl font-bold text-gray-800">
                       {item.title}
                     </h3>
                   </div>

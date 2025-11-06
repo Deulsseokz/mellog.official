@@ -38,7 +38,7 @@ export function Feedback() {
       >
         <motion.button
           variants={buttonVariants}
-          className="w-full py-3 rounded-xl border-2 border-[#F76F8E] bg-white text-[#F76F8E] text-lg font-bold shadow-md hover:bg-gray-50 transition-colors duration-200"
+          className="w-full py-2 xs:py-3 rounded-xl border-2 border-[#F76F8E] bg-white text-[#F76F8E] text-base xs:text-lg font-bold shadow-md hover:bg-gray-50 transition-colors duration-200 text-center"
         >
           멜로그 후기쓰고 1000P 받기
         </motion.button>

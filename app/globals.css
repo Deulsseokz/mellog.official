@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "tailwindcss";
 @import "swiper/css";
 @import "swiper/css/pagination";
 
@@ -10,6 +9,10 @@
   --swiper-pagination-color: #f76f8e;
   --swiper-pagination-bullet-inactive-color: #ffe4ea;
   --swiper-pagination-bullet-inactive-opacity: 0.5;
+}
+
+@theme {
+  --breakpoint-xs: 376px;
 }
 
 @theme inline {

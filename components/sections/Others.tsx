@@ -44,13 +44,13 @@ const contactLinks = [
 
 export function Others() {
   return (
-    <div className="w-full h-full flex flex-col justify-between bg-white p-6">
+    <div className="w-full h-full flex flex-col justify-between bg-white p-4 xs:p-6">
       <div>
-        <div className="mb-5">
-          <h2 className="text-xl font-bold text-[#fc5f89] mb-1">
+        <div className="mb-3 xs:mb-5">
+          <h2 className="text-lg xs:text-xl font-bold text-[#ff89a9] mb-1">
             ✦ 멜로그 히든 뱃지 ✦
           </h2>
-          <p className="text-sm text-gray-500">
+          <p className="text-xs xs:text-sm text-gray-500">
             멜로그 오픈을 기념해서, 특별한 히든 뱃지를 공개해요
           </p>
         </div>
@@ -84,11 +84,11 @@ export function Others() {
       </div>
 
       <div>
-        <div className="mb-5">
-          <h2 className="text-xl font-bold text-gray-800 mb-1">
+        <div className="mb-3 xs:mb-5">
+          <h2 className="text-lg xs:text-xl font-bold text-gray-800 mb-1">
             지금 다른 커플은?
           </h2>
-          <p className="text-sm text-gray-500">
+          <p className="text-xs xs:text-sm text-gray-500">
             멜로그가 선정한 프로 챌린저를 구경해보세요
           </p>
         </div>
@@ -121,10 +121,12 @@ export function Others() {
         </Swiper>
       </div>
 
-      <div>
-        <div className="mb-5">
-          <h3 className="text-lg font-bold text-gray-800">Contact</h3>
-          <p className="text-sm text-gray-500">
+      <div className="hidden xs:block">
+        <div className="mb-3 xs:mb-5">
+          <h3 className="text-lg xs:text-xl font-bold text-gray-800">
+            Contact
+          </h3>
+          <p className="text-xs xs:text-sm text-gray-500">
             멜로그는 모든 기회에 열려있어요. 언제든지 연락주세요!
           </p>
         </div>

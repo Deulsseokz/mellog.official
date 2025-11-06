@@ -50,20 +50,22 @@ export function Tip() {
   };
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-between bg-white p-8">
+    <div className="w-full h-full flex flex-col items-center justify-between bg-white p-2 xs:p-8">
       {/* 1. 상단 타이틀 */}
-      <div className="text-center flex flex-col items-center justify-center gap-3">
-        <Image
-          src="/logo/face-love.png"
-          alt="Mellog Logo"
-          width={44}
-          height={44}
-        />
+      <div className="text-center flex flex-col items-center justify-center gap-2 xs:gap-3">
+        <div className="w-[35px] xs:w-[44px]">
+          <Image
+            src="/logo/face-love.png"
+            alt="Mellog Logo"
+            width={44}
+            height={44}
+          />
+        </div>
         <div className="flex flex-col items-center justify-center gap-1">
-          <span className="text-m font-semibold text-gray-500">
+          <span className="text-xs xs:text-base font-semibold text-gray-500">
             지도로 만드는 나만의 앨범
           </span>
-          <h2 className="text-3xl text-[#313131] font-bold">
+          <h2 className="text-xl xs:text-3xl text-[#313131] font-bold">
             멜로그 즐기는 TIP
           </h2>
         </div>
@@ -72,7 +74,7 @@ export function Tip() {
       <Swiper
         pagination={pagination}
         modules={[Pagination]}
-        className="w-full h-[500px] relative custom-swiper"
+        className="w-full h-[380] xs:h-[500px] relative custom-swiper"
       >
         {tipData.map((tip) => (
           <SwiperSlide
@@ -80,10 +82,10 @@ export function Tip() {
             className="flex flex-col items-center bg-white justify-center gap-3"
           >
             <div className="w-full flex flex-col items-center bg-white justify-center gap-5 p-3">
-              <span className="text-sm border-2 border-[#F76F8E] font-bold text-[#F76F8E] bg-white px-3 py-[2px] rounded-full">
+              <span className="text-xs xs:text-sm border-2 border-[#F76F8E] font-bold text-[#F76F8E] bg-white px-3 py-[2px] rounded-full">
                 {tip.title}
               </span>
-              <div className="w-[300px] h-auto ">
+              <div className="w-[200px] xs:w-[300px] h-auto ">
                 <Image
                   src={tip.img}
                   alt={tip.title}
@@ -93,8 +95,12 @@ export function Tip() {
                 />
               </div>
               <div className="text-center">
-                <h3 className="text-s font-bold text-[#F76F8E]">{tip.sub1}</h3>
-                <p className="text-xl font-bold text-[#313131]">{tip.sub2}</p>
+                <h3 className="text-xs xs:text-base font-bold text-[#F76F8E]">
+                  {tip.sub1}
+                </h3>
+                <p className="text-xl xs:text-2xl font-bold text-[#313131]">
+                  {tip.sub2}
+                </p>
               </div>
             </div>
           </SwiperSlide>
@@ -105,7 +111,7 @@ export function Tip() {
         href="https://apps.apple.com/kr/app/%EB%A9%9C%EB%A1%9C%EA%B7%B8/id6754064222"
         target="_blank"
         rel="noopener noreferrer"
-        className="w-full py-3 rounded-xl border-2 border-[#F76F8E] bg-white text-[#F76F8E] text-lg font-bold shadow-md hover:bg-gray-50 transition-colors duration-200 text-center"
+        className="w-full py-2 xs:py-3 rounded-xl border-2 border-[#F76F8E] bg-white text-[#F76F8E] text-base xs:text-lg font-bold shadow-md hover:bg-gray-50 transition-colors duration-200 text-center"
       >
         멜로그 바로가기
       </a>
