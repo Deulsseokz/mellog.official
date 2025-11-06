@@ -12,7 +12,7 @@
 }
 
 @theme {
-  --breakpoint-xs: 376px;
+  --breakpoint-xs: 420px;
 }
 
 @theme inline {
