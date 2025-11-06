@@ -123,7 +123,7 @@ export function Test() {
           </div>
 
           {/* 3. 메인 테스트 카드 */}
-          <div className="w-full min-h-[60vh] xs:min-h-[70vh] bg-white rounded-t-[20px] border-[5px] border-[#FFE9EE] py-7 xs:py-10 px-5 flex flex-col gap-9">
+          <div className="w-full min-h-[55vh] xs:min-h-[70vh] bg-white rounded-t-[20px] border-[5px] border-[#FFE9EE] py-7 xs:py-10 px-5 flex flex-col gap-9">
             {quizData.map((item, index) => (
               <div key={item.q}>
                 <div className="flex flex-col gap-3 xs:gap-5">

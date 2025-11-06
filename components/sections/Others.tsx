@@ -67,6 +67,7 @@ export function Others() {
           slidesPerView={"auto"}
           spaceBetween={16}
           freeMode={true}
+          loop
           modules={[FreeMode, Autoplay]}
           autoplay={{
             delay: 3000,
@@ -102,24 +103,33 @@ export function Others() {
           </p>
         </div>
 
-        <div className="overflow-hidden w-full h-[339px]">
-          <div className="flex animate-scrollFast">
-            {postImages.map((post) => (
-              <div
-                key={post.id}
-                className="min-w-[173px] h-[339px] shrink-0 mx-2"
-              >
-                <Image
-                  src={post.src}
-                  alt={post.alt}
-                  width={173}
-                  height={339}
-                  className="object-cover rounded-lg"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+        <Swiper
+          slidesPerView={"auto"}
+          spaceBetween={16}
+          freeMode={true}
+          loop
+          modules={[FreeMode, Autoplay]}
+          autoplay={{
+            delay: 1000,
+            disableOnInteraction: false,
+          }}
+          className="w-full h-[339px]"
+        >
+          {postImages.map((post) => (
+            <SwiperSlide
+              key={post.id}
+              style={{ width: "173px", height: "339px" }}
+            >
+              <Image
+                src={post.src}
+                alt={post.alt}
+                width={173}
+                height={339}
+                objectFit="cover"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
 
       {/* Contact */}

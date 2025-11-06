@@ -57,20 +57,3 @@ body {
   color: #fff;
   background: #f76f8e;
 }
-
-@keyframes scrollX {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.animate-scrollSlow {
-  animation: scrollX 3s linear infinite;
-}
-
-.animate-scrollFast {
-  animation: scrollX 8s linear infinite;
-}
