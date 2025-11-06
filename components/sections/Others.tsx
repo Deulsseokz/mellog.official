@@ -51,7 +51,7 @@ const contactLinks = [
 
 export function Others() {
   return (
-    <div className="w-full h-full overflow-hidden flex flex-col justify-between bg-white p-4 xs:p-6">
+    <div className="w-full h-full overflow-hidden flex flex-col justify-between bg-white p-4 xs:p-6 lg:p-3">
       {/* 뱃지 슬라이드 */}
       <div>
         <div className="mb-3 xs:mb-5">
@@ -133,13 +133,13 @@ export function Others() {
       </div>
 
       {/* Contact */}
-      <div className="hidden xs:block lg:hidden">
+      <div className="hidden xs:block lg:flex lg:items-center lg:justify-between">
         <div className="mb-3 xs:mb-5">
           <h3 className="text-lg xs:text-xl font-bold text-gray-800">
             Contact
           </h3>
           <p className="text-xs xs:text-sm text-gray-500">
-            멜로그는 모든 기회에 열려있어요. 언제든지 연락주세요!
+            멜로그는 열려있어요. 언제든지 연락주세요!
           </p>
         </div>
 
