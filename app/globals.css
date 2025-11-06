@@ -11,8 +11,15 @@
   --swiper-pagination-bullet-inactive-opacity: 0.5;
 }
 
+/*
+* 미디어쿼리
+* 기본: 아이폰se같은 매우 작은 모바일 환경
+* -xs: 보통 핸드폰 크기
+* -lg: 500px pc환경
+*/
 @theme {
   --breakpoint-xs: 420px;
+  --breakpoint-lg: 499px;
 }
 
 @theme inline {

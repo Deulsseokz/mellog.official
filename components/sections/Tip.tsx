@@ -59,7 +59,7 @@ export function Tip() {
   };
 
   return (
-    <div className="w-full h-full flex flex-col items-center justify-between bg-white p-2 xs:p-8">
+    <div className="w-full h-full overflow-hidden flex flex-col items-center justify-between bg-white p-2 xs:p-8 lg:p-4">
       {/* 1. 상단 타이틀 */}
       <div className="text-center flex flex-col items-center justify-center gap-2 xs:gap-3">
         <div className="w-[35px] xs:w-[44px]">
@@ -71,10 +71,10 @@ export function Tip() {
           />
         </div>
         <div className="flex flex-col items-center justify-center gap-1">
-          <span className="text-xs xs:text-base font-semibold text-gray-500">
+          <span className="text-xs xs:text-base lg:text-[14px] font-semibold text-gray-500">
             지도로 만드는 나만의 앨범
           </span>
-          <h2 className="text-xl xs:text-3xl text-[#313131] font-bold">
+          <h2 className="text-xl xs:text-3xl lg:text-2xl text-[#313131] font-bold">
             멜로그 즐기는 TIP
           </h2>
         </div>
@@ -83,7 +83,7 @@ export function Tip() {
       <Swiper
         pagination={pagination}
         modules={[Pagination]}
-        className="w-full h-[380] xs:h-[500px] relative custom-swiper"
+        className="w-full h-[380] xs:h-[500px] lg:h-[420px] relative custom-swiper"
       >
         {tipData.map((tip) => (
           <SwiperSlide
@@ -94,7 +94,7 @@ export function Tip() {
               <span className="text-xs xs:text-sm border-2 border-[#F76F8E] font-bold text-[#F76F8E] bg-white px-3 py-[2px] rounded-full">
                 {tip.title}
               </span>
-              <div className="w-[200px] xs:w-[300px] h-auto ">
+              <div className="w-[200px] xs:w-[300px] lg:w-[230px] h-auto ">
                 <Image
                   src={tip.img}
                   alt={tip.title}

@@ -51,7 +51,7 @@ const contactLinks = [
 
 export function Others() {
   return (
-    <div className="w-full h-full flex flex-col justify-between bg-white p-4 xs:p-6">
+    <div className="w-full h-full overflow-hidden flex flex-col justify-between bg-white p-4 xs:p-6">
       {/* 뱃지 슬라이드 */}
       <div>
         <div className="mb-3 xs:mb-5">
@@ -123,7 +123,7 @@ export function Others() {
       </div>
 
       {/* Contact */}
-      <div className="hidden xs:block">
+      <div className="hidden xs:block lg:hidden">
         <div className="mb-3 xs:mb-5">
           <h3 className="text-lg xs:text-xl font-bold text-gray-800">
             Contact

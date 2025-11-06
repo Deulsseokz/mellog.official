@@ -29,7 +29,7 @@ export function Feedback() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      className="w-full h-full relative bg-[#FFE4EA]"
+      className="w-full h-full overflow-hidden relative bg-[#FFE4EA]"
     >
       <Image
         src="/feedback/2.jpg"

@@ -76,13 +76,13 @@ export function Test() {
   const inactiveClass = `${baseButtonClass} border-gray-300 text-gray-500 bg-white`;
 
   return (
-    <div className="h-full flex flex-col justify-end bg-[#FFE4EA]">
+    <div className="h-full flex flex-col justify-end bg-[#FFE4EA] overflow-hidden">
       <motion.div
         variants={sectionVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
-        className="w-full bg-[#FF89A9] pt-12 px-4 rounded-t-4xl flex flex-col gap-5"
+        className="w-full bg-[#FF89A9] pt-12 lg:pt-8 px-4 rounded-t-4xl flex flex-col gap-5"
       >
         {/* 1. 상단 타이틀 */}
         <motion.div
@@ -90,7 +90,7 @@ export function Test() {
           className="flex flex-col items-center"
         >
           {/* 1-1. 상단 타이틀 */}
-          <div className="flex justify-center w-[250px] xs:w-[360px]">
+          <div className="flex justify-center w-[250px] xs:w-[360px] lg:w-[300px]">
             <Image
               src="/test/title.svg"
               alt="멜로그 테스트"
@@ -123,7 +123,7 @@ export function Test() {
           </div>
 
           {/* 3. 메인 테스트 카드 */}
-          <div className="w-full xs:min-h-[70vh] bg-white rounded-t-[20px] border-[5px] border-[#FFE9EE] py-7 xs:py-10 px-5 flex flex-col gap-9">
+          <div className="w-full min-h-[60vh] xs:min-h-[70vh] bg-white rounded-t-[20px] border-[5px] border-[#FFE9EE] py-7 xs:py-10 px-5 flex flex-col gap-9">
             {quizData.map((item, index) => (
               <div key={item.q}>
                 <div className="flex flex-col gap-3 xs:gap-5">
