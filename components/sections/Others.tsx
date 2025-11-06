@@ -7,9 +7,16 @@ import "swiper/css/free-mode";
 import { FreeMode, Autoplay } from "swiper/modules";
 
 const postImages = [
-  { id: 1, src: "/others/1.jpg", alt: "멜로그 게시물 1" },
-  { id: 2, src: "/others/2.jpg", alt: "멜로그 게시물 2" },
-  { id: 3, src: "/others/3.jpg", alt: "멜로그 게시물 3" },
+  { id: 1, src: "/others/1.jpg", alt: "멜로그 게시물" },
+  { id: 2, src: "/others/2.jpg", alt: "멜로그 게시물" },
+  { id: 3, src: "/others/3.jpg", alt: "멜로그 게시물" },
+  { id: 4, src: "/others/4.jpg", alt: "멜로그 게시물" },
+  { id: 5, src: "/others/5.jpg", alt: "멜로그 게시물" },
+  { id: 6, src: "/others/6.jpg", alt: "멜로그 게시물" },
+  { id: 7, src: "/others/7.jpg", alt: "멜로그 게시물" },
+  { id: 8, src: "/others/8.jpg", alt: "멜로그 게시물" },
+  { id: 9, src: "/others/9.jpg", alt: "멜로그 게시물" },
+  { id: 10, src: "/others/10.jpg", alt: "멜로그 게시물" },
 ];
 const badgeImages = [
   { id: 1, src: "/others/badge/1.png", alt: "뱃지1" },
@@ -45,6 +52,7 @@ const contactLinks = [
 export function Others() {
   return (
     <div className="w-full h-full flex flex-col justify-between bg-white p-4 xs:p-6">
+      {/* 뱃지 슬라이드 */}
       <div>
         <div className="mb-3 xs:mb-5">
           <h2 className="text-lg xs:text-xl font-bold text-[#ff89a9] mb-1">
@@ -83,6 +91,7 @@ export function Others() {
         </Swiper>
       </div>
 
+      {/* 게시물 슬라이드 */}
       <div>
         <div className="mb-3 xs:mb-5">
           <h2 className="text-lg xs:text-xl font-bold text-gray-800 mb-1">
@@ -93,34 +102,27 @@ export function Others() {
           </p>
         </div>
 
-        <Swiper
-          slidesPerView={"auto"}
-          spaceBetween={16}
-          freeMode={true}
-          modules={[FreeMode, Autoplay]}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          className="w-full h-[339px]"
-        >
-          {postImages.map((post) => (
-            <SwiperSlide
-              key={post.id}
-              style={{ width: "173px", height: "339px" }}
-            >
-              <Image
-                src={post.src}
-                alt={post.alt}
-                width={173}
-                height={339}
-                objectFit="cover"
-              />
-            </SwiperSlide>
-          ))}
-        </Swiper>
+        <div className="overflow-hidden w-full h-[339px]">
+          <div className="flex animate-scrollFast">
+            {postImages.map((post) => (
+              <div
+                key={post.id}
+                className="min-w-[173px] h-[339px] shrink-0 mx-2"
+              >
+                <Image
+                  src={post.src}
+                  alt={post.alt}
+                  width={173}
+                  height={339}
+                  className="object-cover rounded-lg"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
+      {/* Contact */}
       <div className="hidden xs:block">
         <div className="mb-3 xs:mb-5">
           <h3 className="text-lg xs:text-xl font-bold text-gray-800">
